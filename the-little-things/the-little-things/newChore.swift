@@ -1,17 +1,15 @@
 //
-//  choreTrackerVCViewController.swift
+//  newChore.swift
 //  the-little-things
 //
-//  Created by Atreya Misra on 10/22/16.
+//  Created by Atreya Misra on 10/23/16.
 //  Copyright © 2016 HackTX2016. All rights reserved.
 //
 
 import UIKit
 
-class choreTrackerVCViewController: UIViewController {
+class newChore: UIViewController {
 
-    @IBOutlet weak var choreTracker: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
