@@ -16,6 +16,7 @@
 		C0F4C1031DBC182100DA0430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0F4C1011DBC182100DA0430 /* LaunchScreen.storyboard */; };
 		C0F4C10E1DBC182200DA0430 /* the_little_thingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F4C10D1DBC182200DA0430 /* the_little_thingsTests.swift */; };
 		C0F4C1191DBC182200DA0430 /* the_little_thingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F4C1181DBC182200DA0430 /* the_little_thingsUITests.swift */; };
+		D60770011DBC69A600E0EB75 /* choreTrackerVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60770001DBC69A600E0EB75 /* choreTrackerVCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C0F4C1141DBC182200DA0430 /* the-little-thingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "the-little-thingsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0F4C1181DBC182200DA0430 /* the_little_thingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = the_little_thingsUITests.swift; sourceTree = "<group>"; };
 		C0F4C11A1DBC182200DA0430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60770001DBC69A600E0EB75 /* choreTrackerVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = choreTrackerVCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				C0F4C1011DBC182100DA0430 /* LaunchScreen.storyboard */,
 				C0F4C1041DBC182100DA0430 /* Info.plist */,
 				C0F2A7671DBC4725007A3086 /* LoginVC.swift */,
+				D60770001DBC69A600E0EB75 /* choreTrackerVCViewController.swift */,
 			);
 			path = "the-little-things";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60770011DBC69A600E0EB75 /* choreTrackerVCViewController.swift in Sources */,
 				C0F2A76A1DBC4C30007A3086 /* SignupVC.swift in Sources */,
 				C0F4C0FB1DBC182100DA0430 /* ViewController.swift in Sources */,
 				C0F4C0F91DBC182100DA0430 /* AppDelegate.swift in Sources */,
