@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="5Ab-Kj-yGe">
             <objects>
-                <viewController id="7g7-U0-uaL" sceneMemberID="viewController">
+                <viewController id="7g7-U0-uaL" customClass="LoginVC" customModule="the_little_things" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zGl-g8-l1w"/>
                         <viewControllerLayoutGuide type="bottom" id="j0d-jD-z6A"/>
@@ -36,27 +36,34 @@
                                 <frame key="frameInset" minX="163" minY="283" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="loginTapped:" destination="7g7-U0-uaL" eventType="touchUpInside" id="QbH-Hr-Uxv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iC-yx-XKZ">
                                 <frame key="frameInset" minX="107" minY="364" width="161" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Don't have an account?"/>
                                 <connections>
-                                    <segue destination="TrY-90-Rum" kind="show" id="Kep-oH-hyK"/>
+                                    <segue destination="TrY-90-Rum" kind="presentation" id="Kep-oH-hyK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtPassword" destination="KJj-jr-oDr" id="tOm-0D-d74"/>
+                        <outlet property="txtUsername" destination="5vI-sE-qaZ" id="Ane-nn-MrM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGt-1P-AP0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1836" y="-235"/>
         </scene>
-        <!--View Controller-->
+        <!--SignupVC-->
         <scene sceneID="SvB-DN-1xo">
             <objects>
-                <viewController id="TrY-90-Rum" sceneMemberID="viewController">
+                <viewController id="TrY-90-Rum" customClass="SignupVC" customModule="the_little_things" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a2h-Ru-dLw"/>
                         <viewControllerLayoutGuide type="bottom" id="uKg-8D-ZP4"/>
@@ -83,13 +90,16 @@
                                 <frame key="frameInset" minX="163" minY="367" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="signupTapped:" destination="TrY-90-Rum" eventType="touchUpInside" id="ZTP-R2-07c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kll-mq-q8F">
                                 <frame key="frameInset" minX="99" minY="431" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Already have an account?"/>
                                 <connections>
-                                    <segue destination="7g7-U0-uaL" kind="show" id="UQd-lG-igB"/>
+                                    <action selector="gotoLogin:" destination="TrY-90-Rum" eventType="touchUpInside" id="54L-oR-Eho"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Re-enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LnW-ZZ-Cxf">
@@ -102,6 +112,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="txtConfirmPassword" destination="LnW-ZZ-Cxf" id="fjf-Au-6UP"/>
+                        <outlet property="txtPassword" destination="hb1-bO-A1W" id="Iev-Yz-9Nb"/>
+                        <outlet property="txtUsername" destination="1cP-uy-Zwo" id="h2h-4k-eCa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iFF-hw-u0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,7 +209,4 @@
             <point key="canvasLocation" x="133.59999999999999" y="60.719640179910051"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="UQd-lG-igB"/>
-    </inferredMetricsTieBreakers>
 </document>
