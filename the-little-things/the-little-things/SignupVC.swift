@@ -26,6 +26,23 @@ class SignupVC: UIViewController {
     }
     
     @IBAction func signupTapped(_ sender: AnyObject) {
+        let username = txtUsername.text;
+        let password = txtPassword.text;
+        let confirmPassword = txtConfirmPassword.text;
+        
+        // Check for completed fields
+        if(username!.isEmpty || password!.isEmpty || confirmPassword!.isEmpty) {
+            displayAlertMessage(userMessage: "Please complete all fields.");
+            return;
+        }
+        
+        // Check for matching passwords
+        if(password != confirmPassword) {
+            displayAlertMessage(userMessage: "Passwords do not match.");
+            return;
+        }
+        displayAlertMessage(userMessage: username!)
+        
        // This stuff is currently broken
       /*  var username:NSString = txtUsername.text as NSString
         var password:NSString = txtPassword.text as NSString
@@ -146,14 +163,14 @@ class SignupVC: UIViewController {
         self.dismiss(animated: true, completion:nil)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func displayAlertMessage(userMessage:String) {
+        let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil)
+        
+        alert.addAction(okAction);
+        
+        self.present(alert, animated:true, completion:nil)
     }
-    */
 
 }
